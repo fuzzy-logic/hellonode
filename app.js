@@ -1,30 +1,13 @@
-const restify = require('restify');
-const server = restify.createServer();
+var http = require('http');
 
 var PORT = process.env['PORT'] || 3005;
 
-server.get('/env', (request, response) => {
-  console.log('nodzure: GET /env');
-  var data = {err: {}};
-  var text = 'hello world';
-  /*
-  data['PORT'] = PORT;
-  var errs = 0;
-  for (key in process.env) {
-    try {
-      data[key] = process.env[key];
-      throw new Error('blah');
-    } catch (err) {
-      console.log('error: ' + err.message);
-      errs++;
-      data.err[errs] = {message: err.message, stack: err.stack};
-    }
-  }
-  */
-  response.header('Content-Type', 'application/json');
-  response.header('Content-Type', 'text/plain');
-  response.send(200, text);
+console.log('nodzure running http://host:' +PORT + '/');
+
+
+var server = http.createServer(function(req, res) {
+  console.log('nodzure: GET /');
+  res.writeHead(200);
+  res.end('Hello World!: PORT=' + PORT);
 });
-
-
-server.listen(PORT, () => console.log('nodzure running http://host:' +PORT + '/'));
+server.listen(PORT);
