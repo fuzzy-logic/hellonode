@@ -6,6 +6,7 @@ var PORT = process.env['PORT'] || 3005;
 server.get('/env', (request, response) => {
   console.log('nodzure: GET /env');
   var data = {err: {}};
+  var text = 'hello world';
   /*
   data['PORT'] = PORT;
   var errs = 0;
@@ -21,7 +22,8 @@ server.get('/env', (request, response) => {
   }
   */
   response.header('Content-Type', 'application/json');
-  response.send(200, data);
+  response.header('Content-Type', 'text/plain');
+  response.send(200, text);
 });
 
 
