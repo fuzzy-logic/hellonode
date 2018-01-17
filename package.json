@@ -1,0 +1,26 @@
+{
+  "name": "nodzure",
+  "version": "1.0.0",
+  "description": "azure hello world",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "dependencies": {
+    "restify": "6.2.1",
+    "sexylog": "0.1.2"
+  },
+  "devDependencies": {
+    "superagent": "3.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuzzy-logic/nodzure.git"
+  },
+  "author": "fuzzy-logic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fuzzy-logic/nodzure/issues"
+  },
+  "homepage": "https://github.com/fuzzy-logic/nodzure#readme"
+}
