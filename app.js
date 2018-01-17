@@ -7,7 +7,11 @@ server.get('/env', (req, res) => {
   console.log('nodzure: GET /env');
   var data = {};
   for (key in process.env) {
-    data[key] = process.env[key];
+    try {
+      data[key] = process.env[key];
+    } catch (err) {
+      console.log('error: ' + err.message);
+    }
   }
   data['PORT'] = PORT;
   res.send(200, data);
