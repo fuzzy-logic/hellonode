@@ -3,18 +3,25 @@ const server = restify.createServer();
 
 var PORT = process.env['PORT'] || 3005;
 
-server.get('/env', (req, res) => {
+server.get('/env', (request, response) => {
   console.log('nodzure: GET /env');
-  var data = {};
+  var data = {err: {}};
+  /*
+  data['PORT'] = PORT;
+  var errs = 0;
   for (key in process.env) {
     try {
       data[key] = process.env[key];
+      throw new Error('blah');
     } catch (err) {
       console.log('error: ' + err.message);
+      errs++;
+      data.err[errs] = {message: err.message, stack: err.stack};
     }
   }
-  data['PORT'] = PORT;
-  res.send(200, data);
+  */
+  response.header('Content-Type', 'application/json');
+  response.send(200, data);
 });
 
 
