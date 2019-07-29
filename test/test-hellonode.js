@@ -39,6 +39,7 @@ describe('test hello node web app', function() {
 		console.log(err.message);
 		console.log(err.response);
 		done(err);
+		process.exit(1);
 
    	});
     });
