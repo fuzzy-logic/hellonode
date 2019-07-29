@@ -2,6 +2,7 @@ const expect = require('expect.js');
 const assert = require('assert');
 const request = require("superagent");
 
+var PORT = process.env['PORT'] || 8089;
 
 
 
@@ -23,7 +24,7 @@ describe('test hello node web app', function() {
 
     it('web app runs', function(done) {
         const server = require('../hello-world-app.js');
-        const url  = 'http://localhost:8089/';
+        const url  = `http://localhost:${PORT}/`;
    	request.get(url)
    	.then(res => {
       		// res.text, res.body, res.headers, res.status
