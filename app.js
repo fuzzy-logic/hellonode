@@ -8,6 +8,6 @@ console.log('hellonode server running http://host:' +PORT + '/');
 var server = http.createServer(function(req, res) {
   console.log('hellonode: GET /');
   res.writeHead(200);
-  res.end('Hello World!: PORT=' + PORT);
+  res.end('Hello World Too!: PORT=' + PORT);
 });
 server.listen(PORT);
