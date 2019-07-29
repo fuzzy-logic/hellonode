@@ -10,7 +10,7 @@ describe('test hello node web app', function() {
 
 
    before(function(){
-	console.log("before test");
+	console.log(`before test: PORT=${PORT}`);
     })
 
     afterEach(function(){
@@ -29,7 +29,7 @@ describe('test hello node web app', function() {
    	.then(res => {
       		// res.text, res.body, res.headers, res.status
         	console.log(JSON.stringify(res));
-        	expect(res.text).to.be("Hello World!: PORT=8089");
+        	expect(res.text).to.be(`Hello World!: PORT=${PORT}`);
         	expect(res.status).to.be(200);
 		process.exit(0);
         	done();
