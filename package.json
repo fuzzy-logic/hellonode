@@ -7,20 +7,21 @@
     "test": "mocha --recursive"
   },
   "dependencies": {
-    "restify": "6.2.1",
+    "restify": "8.3.3",
     "sexylog": "0.1.2"
   },
   "devDependencies": {
-    "superagent": "3.8.1"
+    "superagent": "5.1.0",
+    "mocha": "6.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fuzzy-logic/nodzure.git"
+    "url": "git+https://github.com/fuzzy-logic/hellonode.git"
   },
   "author": "fuzzy-logic",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fuzzy-logic/nodzure/issues"
+    "url": "https://github.com/fuzzy-logic/hellonode/issues"
   },
-  "homepage": "https://github.com/fuzzy-logic/nodzure#readme"
+  "homepage": "https://github.com/fuzzy-logic/hellonode#readme"
 }
