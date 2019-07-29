@@ -4,7 +4,7 @@
   "description": "azure hello world",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "node node_modules/mocha/bin/mocha --recursive"
   },
   "dependencies": {
     "restify": "8.3.3",
